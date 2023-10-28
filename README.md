@@ -2,6 +2,60 @@
 
 This repository contains the code base for a Shiny application which enables users to extract dose volume histogram data from Eclipse Treatment Planning systems into a easy to analyze tabular format.
 
+# Where is the app
+
+A demo app is hosted at <https://santam.shinyapps.io/eclipse-dvh-parser/>
+
+# Use the app locally
+
+## Prerequisites
+
+1.  **R:** You must have R installed on your computer. If you haven\'t already, you can download and install R from [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).
+
+2.  **RStudio (Optional but Recommended):** While not strictly necessary, RStudio provides an integrated environment for running Shiny apps. You can download and install RStudio from [here](https://rstudio.com/products/rstudio/download/).
+
+3.  **Git:** You need Git installed to clone the GitHub repository. If you haven't installed Git, you can get it from [here](https://git-scm.com/downloads).
+
+4.  **Dependencies:** Before running the app, you'll need to install certain R packages. Specifically, this app relies on the `tidyverse` package.
+
+## Installation steps
+
+### 1. Clone the github repository
+
+Open a terminal (or the command prompt on Windows) and navigate to the directory where you want to clone the repository. Run the following command:
+
+```         
+git clone https://santam.shinyapps.io/eclipse-dvh-parser/
+```
+
+### 2. Install required packages in R
+
+If you haven\'t already installed the `tidyverse` package, you can do so using the following command in R or RStudio:
+
+``` R
+install.packages("tidyverse")
+```
+
+### 3. Set the working directory
+
+Navigate to the cloned repository's directory in RStudio and click on the "More" option (three dots) at the top right of the Files pane, and then choose "Set As Working Directory".
+
+Alternatively, you can use the `setwd()` function in R:
+
+``` R
+setwd("path/to/cloned/repository/eclipse-dvh-parser")
+```
+
+### 4. Launch the app
+
+You can now run the app by executing the following commands in R or R studio
+
+``` R
+shiny::runApp("app.R")
+```
+
+This will start the Shiny app, and it should automatically open in a new browser window. If it doesn\'t, RStudio will provide a link in the console that you can click on to view the app.
+
 # What is a Dose volume histogram (DVH)
 
 A dose volume histogram is 2 dimensional visualization of the three dimensional radiation dose distribution. Most commonly we work with cumulative dose volume histograms which represent doses on the Y axis and volumes on the X axis. An alternative way of visualization is differential dose volume histograms.
