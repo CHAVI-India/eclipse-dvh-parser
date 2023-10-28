@@ -1,3 +1,10 @@
+mypackages <- c("shiny","gridlayout","bslib","tidyverse")
+
+checkpkg <- mypackages[!(mypackages %in% installed.packages()[,"Package"])]
+
+if(length(checkpkg)) install.packages(checkpkg, dependencies = TRUE)
+
+
 library(shiny)
 library(gridlayout)
 library(bslib)
