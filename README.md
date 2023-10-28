@@ -6,11 +6,17 @@ This repository contains the code base for a Shiny application which enables use
 
 A demo app is hosted at <https://santam.shinyapps.io/eclipse-dvh-parser/>
 
+***Note that the demonstration app will not be able to parse many files.*** It may also not be available at all times if there is a significant user demand. We recommend that you download and use the app locally following the instructions below.
+
+# Note on Data Persistence
+
+DVH file contain identifying information on the patient like the name, unique ID etc. Hence the app will always delete all uploaded files and the zip file created after processing the DVH data once the browser window or tab is closed. This behavior means that user data is not saved anywhere one the application exits.
+
 # Use the app locally
 
 ## Prerequisites
 
-1.  **R:** You must have R installed on your computer. If you haven\'t already, you can download and install R from [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).
+1.  **R:** You must have R installed on your computer. If you haven't already, you can download and install R from [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).
 
 2.  **RStudio (Optional but Recommended):** While not strictly necessary, RStudio provides an integrated environment for running Shiny apps. You can download and install RStudio from [here](https://rstudio.com/products/rstudio/download/).
 
@@ -30,9 +36,9 @@ git clone https://santam.shinyapps.io/eclipse-dvh-parser/
 
 ### 2. Install required packages in R
 
-If you haven\'t already installed the `tidyverse` package, you can do so using the following command in R or RStudio:
+If you haven't already installed the `tidyverse` package, you can do so using the following command in R or RStudio:
 
-``` R
+``` r
 install.packages("tidyverse")
 ```
 
@@ -42,7 +48,7 @@ Navigate to the cloned repository's directory in RStudio and click on the "More"
 
 Alternatively, you can use the `setwd()` function in R:
 
-``` R
+``` r
 setwd("path/to/cloned/repository/eclipse-dvh-parser")
 ```
 
@@ -50,11 +56,11 @@ setwd("path/to/cloned/repository/eclipse-dvh-parser")
 
 You can now run the app by executing the following commands in R or R studio
 
-``` R
+``` r
 shiny::runApp("app.R")
 ```
 
-This will start the Shiny app, and it should automatically open in a new browser window. If it doesn\'t, RStudio will provide a link in the console that you can click on to view the app.
+This will start the Shiny app, and it should automatically open in a new browser window. If it doesn't, RStudio will provide a link in the console that you can click on to view the app.
 
 # What is a Dose volume histogram (DVH)
 
