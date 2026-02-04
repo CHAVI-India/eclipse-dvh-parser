@@ -12,7 +12,7 @@ extract_dvh_data <- function(files) {
   
   for (x in files) {
     #p() # Add a progress indicator
-    a <- readLines(x)
+    a <- readLines(x, encoding = "latin1", warn = FALSE)
     
     #randn <- sample(200:10000,1)
     #Read Patient ID and Store It
